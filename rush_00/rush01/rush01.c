@@ -36,13 +36,13 @@ void	fwhile(int j, int i, int fila, int columna)
 {
 	while (j <= columna - 1)
 	{
-		if ((i == 0 || (i == fila -1)) && ((j == 0) || (j == columna -1)))
+		if (((i == 0) && (j == 0)) || ((i == fila - 1) && (j == columna - 1)))
 		{
 			write(1, "/", 1);
 		}
-		else if ((i == 0) && (j == columna - 1))
+		else if ((i == 0) && (j == columna - 1) || (i == fila - 1 && j == 0))
 		{
-			write(1, "'\'", 1);
+			write(1, "\\", 1);
 		}
 		else if ((i == 0 || i == fila - 1) && (j != columna - 1 && j != 0))
 		{

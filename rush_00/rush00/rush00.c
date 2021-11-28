@@ -1,15 +1,7 @@
-#include <unistd.h>
-void	rush(int i, int j);
-void	fwhile(int j, int i, int fila, int columna);
+#include "ft_putchar.c"
 
-int	main(void)
-{
-	int	i;
-	int	j;
+void fwhile(int j, int i, int fila, int columna);
 
-	rush(5, 5);
-	return (0);
-}
 
 void	rush(int a, int b)
 {
@@ -28,7 +20,7 @@ void	rush(int a, int b)
 		fwhile(j, i, fila, columna);
 		i++;
 		if (i != fila)
-			write(1, "\n", 1);
+			ft_putchar('\n');
 	}
 }
 
@@ -38,19 +30,19 @@ void	fwhile(int j, int i, int fila, int columna)
 	{
 		if ((i == 0 || i == fila - 1) && (j == 0 || j == columna - 1))
 		{
-			write(1, "o", 1);
+            ft_putchar('o');
 		}
 		else if ((i == 0 || i == fila - 1) && (j != columna - 1 && j != 0))
 		{
-			write(1, "-", 1);
+            ft_putchar('-');
 		}
 		else if ((i != 0 && i != fila - 1) && (j == columna - 1 || j == 0))
 		{
-			write(1, "|", 1);
+            ft_putchar('|');
 		}
 		else
 		{
-			write(1, " ", 1);
+            ft_putchar(' ');
 		}
 		j++;
 	}

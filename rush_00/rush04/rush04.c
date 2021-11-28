@@ -7,7 +7,7 @@ int	main(void)
 	int	i;
 	int	j;
 
-	rush(5, 5);
+	rush(5, 3);
 	return (0);
 }
 
@@ -36,17 +36,21 @@ void	fwhile(int j, int i, int fila, int columna)
 {
 	while (j <= columna - 1)
 	{
-		if ((i == 0 || i == fila - 1) && (j == 0 || j == columna - 1))
+		if (((i == 0) && (j == 0)) || ((i == fila - 1) && (j == columna - 1)))
 		{
-			write(1, "o", 1);
+			write(1, "A", 1);
+		}
+		else if ((i == 0 && j == columna - 1) || (i == fila - 1 && j == 0))
+		{
+			write(1, "C", 1);
 		}
 		else if ((i == 0 || i == fila - 1) && (j != columna - 1 && j != 0))
 		{
-			write(1, "-", 1);
+			write(1, "B", 1);
 		}
 		else if ((i != 0 && i != fila - 1) && (j == columna - 1 || j == 0))
 		{
-			write(1, "|", 1);
+			write(1, "B", 1);
 		}
 		else
 		{
