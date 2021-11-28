@@ -1,17 +1,9 @@
 #include <unistd.h>
 void	rush(int i, int j);
 void	fwhile(int j, int i, int fila, int columna);
+void	ft_putchar(char b);
 
-int	main(void)
-{
-	int	i;
-	int	j;
-
-	rush(5, 5);
-	return (0);
-}
-
-void	rush(int a, int b)
+void	rush(int x, int y)
 {
 	int	fila;
 	int	columna;
@@ -20,15 +12,18 @@ void	rush(int a, int b)
 
 	i = 0;
 	j = 0;
-	fila = a ;
-	columna = b;
-	while (i <= fila - 1 )
+	fila = x;
+	columna = y;
+	if (x > 0 && y > 0)
 	{
-		j = 0;
-		fwhile(j, i, fila, columna);
-		i++;
-		if (i != fila)
-			write(1, "\n", 1);
+		while (i <= fila - 1 )
+		{
+			j = 0;
+			fwhile(j, i, fila, columna);
+			i++;
+			if (i != fila)
+				ft_putchar('\n');
+		}
 	}
 }
 
@@ -38,23 +33,23 @@ void	fwhile(int j, int i, int fila, int columna)
 	{
 		if (((i == 0) && (j == 0)) || ((i == fila - 1) && (j == columna - 1)))
 		{
-			write(1, "/", 1);
+			ft_putchar('/');
 		}
-		else if ((i == 0) && (j == columna - 1) || (i == fila - 1 && j == 0))
+		else if (((i == 0) && (j == columna - 1)) || ((i == fila - 1) && (j == 0)))
 		{
-			write(1, "\\", 1);
+			ft_putchar('\\');
 		}
 		else if ((i == 0 || i == fila - 1) && (j != columna - 1 && j != 0))
 		{
-			write(1, "*", 1);
+			ft_putchar('*');
 		}
 		else if ((i != 0 && i != fila - 1) && (j == columna - 1 || j == 0))
 		{
-			write(1, "*", 1);
+			ft_putchar('*');
 		}
 		else
 		{
-			write(1, " ", 1);
+			ft_putchar(' ');
 		}
 		j++;
 	}

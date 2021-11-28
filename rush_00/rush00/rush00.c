@@ -14,16 +14,17 @@ void	rush(int a, int b)
 	j = 0;
 	fila = a ;
 	columna = b;
-	while (i <= fila - 1 )
-	{
-		j = 0;
-		fwhile(j, i, fila, columna);
-		i++;
-		if (i != fila)
-			ft_putchar('\n');
-	}
+    if(a > 0 && b > 0){
+	    while (i <= fila - 1 )
+	    {
+            j = 0;
+	    	fwhile(j, i, fila, columna);
+	    	i++;
+            if (i != fila)
+            ft_putchar('\n');
+	    }
+    }
 }
-
 void	fwhile(int j, int i, int fila, int columna)
 {
 	while (j <= columna - 1)
@@ -45,5 +46,7 @@ void	fwhile(int j, int i, int fila, int columna)
             ft_putchar(' ');
 		}
 		j++;
-	}
+
+
+    }
 }

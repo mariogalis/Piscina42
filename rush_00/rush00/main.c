@@ -1,5 +1,4 @@
-#include "rush00.c"
-#include "ft_putchar.c"
+
 
 int	main(void)
 {
