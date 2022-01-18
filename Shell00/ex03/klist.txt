@@ -1,0 +1,6 @@
+Credentials cache: API:6135
+        Principal: magonzal@42MADRID.COM
+
+  Issued                Expires               Principal
+Nov 22 11:56:10 2021  Nov 22 21:56:10 2021  krbtgt/42MADRID.COM@42MADRID.COM
+Nov 22 11:56:11 2021  Nov 22 21:56:10 2021  HTTP/student-storage.42madrid.com@42MADRID.COM
