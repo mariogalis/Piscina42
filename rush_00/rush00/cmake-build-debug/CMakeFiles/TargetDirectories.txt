@@ -1,3 +1,0 @@
-/Users/magonzal/Desktop/rushes/piscina42/rush_00/rush00/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/magonzal/Desktop/rushes/piscina42/rush_00/rush00/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/magonzal/Desktop/rushes/piscina42/rush_00/rush00/cmake-build-debug/CMakeFiles/rush00.dir
